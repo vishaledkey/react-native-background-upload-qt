@@ -1,7 +1,7 @@
 {
-  "name": "react-native-background-upload",
-  "version": "6.6.0-patch",
-  "description": "Cross platform http post file uploader with android and iOS background support",
+  "name": "react-native-background-upload-qt",
+  "version": "6.6.1",
+  "description": "Fork of react-native-background-upload version 6.6.0",
   "main": "src/index.js",
   "scripts": {
     "lint": "yarn lint:ci --fix",
@@ -25,12 +25,12 @@
     "react": "*",
     "react-native": ">=0.47.0"
   },
-  "author": "Steve Potter",
+  "author": "Vishal",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/Vydia/react-native-background-upload/issues"
+    "url": "https://github.com/vishaledkey/react-native-background-upload-qt/issues"
   },
-  "homepage": "https://github.com/Vydia/react-native-background-upload#readme",
+  "homepage": "https://github.com/vishaledkey/react-native-background-upload-qt#readme",
   "devDependencies": {
     "@react-native-community/eslint-config": "^0.0.7",
     "@semantic-release/commit-analyzer": "^6.3.3",
