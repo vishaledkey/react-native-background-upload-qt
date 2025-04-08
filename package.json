@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vydia/react-native-background-upload.git"
+    "url": "https://github.com/vishaledkey/react-native-background-upload-qt.git"
   },
   "keywords": [
     "NSURLSession",
