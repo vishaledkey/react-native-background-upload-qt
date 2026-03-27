@@ -1,6 +1,6 @@
 {
   "name": "react-native-background-upload-qt",
-  "version": "6.6.1-patch.2",
+  "version": "6.6.1-patch.3",
   "description": "Fork of react-native-background-upload version 6.6.0",
   "main": "src/index.js",
   "scripts": {
