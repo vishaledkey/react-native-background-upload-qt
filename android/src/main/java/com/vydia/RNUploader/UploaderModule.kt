@@ -27,6 +27,14 @@ class UploaderModule(val reactContext: ReactApplicationContext) : ReactContextBa
   private var notificationChannelID = "BackgroundUploadChannel"
   private var isGlobalRequestObserver = false
 
+  init {
+    // Initialize UploadServiceConfig as early as possible (when the RN module is constructed).
+    // This is defense-in-depth — the primary fix for Android 16 process resurrection must be
+    // in the host app's Application.onCreate(). See uploadfix.md for details.
+    val application = reactContext.applicationContext as Application
+    initialize(application, notificationChannelID, BuildConfig.DEBUG)
+  }
+
   override fun getName(): String {
     return "RNFileUploader"
   }

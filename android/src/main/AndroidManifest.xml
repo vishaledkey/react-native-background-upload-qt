@@ -1,3 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vydia.RNUploader">
+
+    <!-- Required for Android 14+ (targetSdk 34+): foreground services must declare a type.
+         Without this, startForeground() fails with mAllowStartForeground=false on Android 14+. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+
+    <application>
+        <service
+            android:name="net.gotev.uploadservice.UploadService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync" />
+    </application>
+
 </manifest>
