@@ -216,21 +216,21 @@ class UploaderModule(val reactContext: ReactApplicationContext) : ReactContextBa
                 notificationChannelId = notificationChannelID,
                 isRingToneEnabled = notification.hasKey("enableRingTone") && notification.getBoolean("enableRingTone"),
                 progress = UploadNotificationStatusConfig(
-                        title = if (notification.hasKey("onProgressTitle")) notification.getString("onProgressTitle")!! else "",
-                        message = if (notification.hasKey("onProgressMessage")) notification.getString("onProgressMessage")!! else ""
+                        title = if (notification.hasKey("onProgressTitle")) notification.getString("onProgressTitle")!! else "Uploading",
+                        message = if (notification.hasKey("onProgressMessage")) notification.getString("onProgressMessage")!! else "Upload in progress..."
                 ),
                 success = UploadNotificationStatusConfig(
-                        title = if (notification.hasKey("onCompleteTitle")) notification.getString("onCompleteTitle")!! else "",
-                        message = if (notification.hasKey("onCompleteMessage")) notification.getString("onCompleteMessage")!! else "",
+                        title = if (notification.hasKey("onCompleteTitle")) notification.getString("onCompleteTitle")!! else "Upload complete",
+                        message = if (notification.hasKey("onCompleteMessage")) notification.getString("onCompleteMessage")!! else "Your file was uploaded successfully.",
                         autoClear = notification.hasKey("autoClear") && notification.getBoolean("autoClear")
                 ),
                 error = UploadNotificationStatusConfig(
-                        title = if (notification.hasKey("onErrorTitle")) notification.getString("onErrorTitle")!! else "",
-                        message = if (notification.hasKey("onErrorMessage")) notification.getString("onErrorMessage")!! else ""
+                        title = if (notification.hasKey("onErrorTitle")) notification.getString("onErrorTitle")!! else "Upload failed",
+                        message = if (notification.hasKey("onErrorMessage")) notification.getString("onErrorMessage")!! else "An error occurred while uploading."
                 ),
                 cancelled = UploadNotificationStatusConfig(
-                        title = if (notification.hasKey("onCancelledTitle")) notification.getString("onCancelledTitle")!! else "",
-                        message = if (notification.hasKey("onCancelledMessage")) notification.getString("onCancelledMessage")!! else ""
+                        title = if (notification.hasKey("onCancelledTitle")) notification.getString("onCancelledTitle")!! else "Upload cancelled",
+                        message = if (notification.hasKey("onCancelledMessage")) notification.getString("onCancelledMessage")!! else "The upload was cancelled."
                 )
         )
         request.setNotificationConfig { _, _ ->
